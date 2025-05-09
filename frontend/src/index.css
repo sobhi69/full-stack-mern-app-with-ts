@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --primary-color :#5fcbec;
+}
+
+.popup-mess {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0rem;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    opacity: 0;
+    user-select: none;
+}   
+
+.popup-mess.active {
+    animation: showPopup 2s forwards;
+} 
+
+@keyframes showPopup {
+    to {
+        opacity: 1;
+        bottom: 5rem;
+    }
+}
+
+.popup-mess.delete {
+    background-color: red;
+}
+
+.popup-mess.update {
+    background-color: rgba(102, 94, 247, 0.847);
+}
+
+.popup-mess.create {
+    background-color: green;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+    transition: 0.015s;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgb(17, 17, 96);
+}
+
+.btn {
+    border: none;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 3px;
+    transition: 0.15s;
+}
+
+.btn:hover {
+    background-color: #979797;
+    color: white;
+}
+
+.delete-btn {
+    transition: 0.15s;
+    background-color: rgba(91, 42, 29, 0.847);
+    color: white;
+    border-radius: 2px;
+}
+
+.submit-btn {
+    transition: 0.15s;
+    background-color: rgba(99, 137, 43, 0.847);
+    color: white;
+    border-radius: 2px;
+}
+
+.submit-btn:hover , .delete-btn:hover{
+    opacity: 0.7;
+}
+
+.d-f-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-f-sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cur-p {
+    cursor: pointer;
+}
+
+.row-actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.delete-icon ,
+.edit-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.delete-icon {
+    color:red;
+}
+
+.edit-icon {
+    color: blue;
+}
+
+table tbody tr {
+    height: 2.7rem;
+}
+
+.table-wrapper {
+    padding:1.4rem 0.5rem;
+    height: 32rem;
+    width: 24rem;
+    overflow: auto;
+    margin: auto
+}
+
+input {
+    outline: none;
+    padding: 0 2px;
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.auth-page {
+    background-image: url('./assets/v2ujyxn8.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width:510px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:509px) and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+}

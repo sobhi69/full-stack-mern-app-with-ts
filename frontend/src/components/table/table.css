@@ -1,0 +1,16 @@
+table thead tr th {
+    width: 5rem;
+}
+
+table tbody tr {
+    text-align: center;
+}
+
+table tbody tr .actions {
+    justify-content: space-between;
+}
+
+table tbody tr .actions>* {
+    cursor: pointer;
+}
+

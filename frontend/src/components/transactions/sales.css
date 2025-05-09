@@ -1,0 +1,33 @@
+.sales {
+    display: flex;
+    padding-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.sale-box {
+    width: 24.6rem;
+    min-height: 10rem;
+    border: 1px solid #333;
+    padding: 0.5rem 0.7rem
+}
+
+.sales-person-div {
+    margin: 0.5rem 0;
+}
+
+.arrow-icon {
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.arrow-down-icon {
+    color: blue;
+}
+
+.arrow-up-icon {
+    color: red;
+}
