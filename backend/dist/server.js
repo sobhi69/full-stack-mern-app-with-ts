@@ -29,10 +29,10 @@ app.use(function (req, res, next) {
     next();
 });
 app.use((0, cors_1.default)({
-    origin(requestOrigin, callback) {
-        console.log(requestOrigin);
-        return callback(null, true);
-    }, optionsSuccessStatus: 200, credentials: true
+    origin: '*',
+    methods: '*',
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
 }));
 // routes
 app.use('/api/user', user_1.default);
