@@ -18,7 +18,7 @@ const Header: FC = () => {
 
     return (
         <header className='easy-header'>
- <h2 className='flex items-center text-2xl'><span className='mr-1 text-xl'>easy </span>to Earn <FaSackDollar className='ml-1'/></h2>
+            <h2 className='flex items-center text-2xl'><span className='mr-1 text-xl'>easy </span>to Earn <FaSackDollar className='ml-1' /></h2>
             <div className='d-f-c username-box'>
                 <span style={{ color: "rgb(9, 58, 162)" }}>{user?.role}:</span>
                 <h4>{user?.username}</h4>
@@ -56,11 +56,11 @@ const EasyToEarn: FC<EasyToEarnProps> = ({ }) => {
 
 export default EasyToEarn;
 
-// MERN stack 
-// json web tokens 
-// express 
+// MERN stack
+// json web tokens
+// express
 // axios
-// React, React router dom 
-// typescript 
-// tailwind 
+// React, React router dom
+// typescript
+// tailwind
 // bcrypt 
