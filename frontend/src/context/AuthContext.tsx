@@ -57,8 +57,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
             localStorage.setItem('isAuthorized', 'true')
             localStorage.setItem('user', JSON.stringify(response.data))
             navigate('/')
-        } catch (error:any) {
-            alert(error)
+        } catch (error: any) {
+            const errorMess = await error.response.data.message
+            alert(`error: ${error} error message: ${errorMess}`)
             setError(error)
             return
         } finally {
@@ -90,8 +91,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
             const response = await axiosInstance.post('/auth/register', userInfo)
             setUser(response.data)
             return true
-        } catch (error:any) {
-            alert(error)
+        } catch (error: any) {
+            const errorMess = await error.response.data.message
+            alert(`error: ${error} error message: ${errorMess}`)
             setError(error)
             return false
         } finally {
@@ -108,8 +110,9 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
             localStorage.removeItem('isAuthorized')
             setIsAuthorized(false)
             navigate('/sign-in')
-        } catch (error:any) {
-            alert(error)
+        } catch (error: any) {
+            const errorMess = await error.response.data.message
+            alert(`error: ${error} error message: ${errorMess}`)
             setError(error)
             return
         } finally {
@@ -121,12 +124,13 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
         const { _id } = data
         try {
             const response = await axiosInstance.patch(`/user/${_id}`, data, {
-                headers:{Authorization: `Bearer ${user?.token}`}
+                headers: { Authorization: `Bearer ${user?.token}` }
             })
             setUser(response.data)
             navigate('/')
-        } catch (error:any) {
-            alert(error)
+        } catch (error: any) {
+            const errorMess = await error.response.data.message
+            alert(`error: ${error} error message: ${errorMess}`)
             setError(error)
         } finally {
             setIsLoading(false)
