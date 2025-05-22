@@ -17,7 +17,7 @@ const Header: FC = () => {
     const { user, logout } = useAuth()
 
     return (
-        <header className='easy-header'>
+        <header className='easy-header '>
             <h2 className='flex items-center text-2xl'><span className='mr-1 text-xl'>easy </span>to Earn <FaSackDollar className='ml-1' /></h2>
             <div className='d-f-c username-box'>
                 <span style={{ color: "rgb(9, 58, 162)" }}>{user?.role}:</span>
